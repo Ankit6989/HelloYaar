@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "182069293965",
+    "project_id": "helloyaar-964fa",
+    "storage_bucket": "helloyaar-964fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182069293965:android:05446b5464f5769bee03c4",
+        "android_client_info": {
+          "package_name": "com.apcoding.helloyaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPHLTOQKxMIpG4Qx2sla2qqE4TfWHYU4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
