@@ -1,6 +1,5 @@
 package com.apcoding.helloyaar.presentation.screens
 
-import android.window.SplashScreen
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -19,30 +18,30 @@ import com.apcoding.helloyaar.R
 import kotlinx.coroutines.delay
 
 @Composable
-
 fun SplashScreen(
     navController: NavController
-){
+) {
     LaunchedEffect(key1 = Unit) {
-        delay(200)
+        delay(100)
         navController.navigate("auth") {
             popUpTo(0)
         }
     }
 
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(
-                    MaterialTheme.colorScheme.surface
-                ),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.CenterHorizontally
-        ){
-            Image(
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                MaterialTheme.colorScheme.surface
+            ),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Image(
             modifier = Modifier.size(200.dp),
             painter = painterResource(id = R.drawable.logo),
             contentDescription = ""
-            )
+        )
     }
+
 }

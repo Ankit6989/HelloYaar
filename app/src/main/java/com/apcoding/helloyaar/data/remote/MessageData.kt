@@ -1,10 +1,12 @@
 package com.apcoding.helloyaar.data.remote
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.firebase.Timestamp
 
 data class MessageData(
     val messageId: String? = null,
-    val message: String? = null,
+    var message: String? = null,
     var messageIsEmoted: String? = null,
     var replyMessage: String? = null,
     var replyImage: String? = null,
@@ -25,4 +27,62 @@ data class MessageData(
     val time: Timestamp? = Timestamp.now(),
 
     val visibility: MutableList<String> = mutableListOf()
-)
+
+) : Parcelable {
+
+    constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readParcelable(Timestamp::class.java.classLoader),
+    )
+
+    fun toMap() = mapOf(
+        "visibility" to visibility
+    )
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(messageId)
+        parcel.writeString(message)
+        parcel.writeString(messageIsEmoted)
+        parcel.writeString(replyMessage)
+        parcel.writeString(replyImage)
+        parcel.writeString(replyVideo)
+        parcel.writeString(imageUrl)
+        parcel.writeString(videoUrl)
+        parcel.writeString(senderId)
+        parcel.writeString(senderImage)
+        parcel.writeString(senderUsername)
+        parcel.writeString(getterId)
+        parcel.writeString(getterImage)
+        parcel.writeString(getterUsername)
+        parcel.writeParcelable(time, flags)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<MessageData> {
+        override fun createFromParcel(parcel: Parcel): MessageData {
+            return MessageData(parcel)
+        }
+
+        override fun newArray(size: Int): Array<MessageData?> {
+            return arrayOfNulls(size)
+        }
+    }
+
+
+}
