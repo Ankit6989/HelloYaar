@@ -11,6 +11,12 @@ android {
     namespace = "com.apcoding.helloyaar"
     compileSdk = 34
 
+        packagingOptions {
+            exclude ("META-INF/DEPENDENCIES")
+        }
+
+
+
     defaultConfig {
         applicationId = "com.apcoding.helloyaar"
         minSdk = 26
@@ -77,6 +83,7 @@ dependencies {
     implementation("com.google.firebase:firebase-messaging-ktx:23.1.2")
     //implementation("com.google.firebase:firebase-crashlytics-ktx:18.3.7")
     implementation("com.google.firebase:firebase-analytics-ktx:21.3.0")
+    implementation("com.google.firebase:firebase-appdistribution-gradle:5.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -138,4 +145,5 @@ dependencies {
 
     // Animated Navigation
     implementation("com.google.accompanist:accompanist-navigation-animation:0.24.13-rc")
+
 }

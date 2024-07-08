@@ -107,7 +107,7 @@ class MessageViewModel @Inject constructor(
         messageRepo.emoteMessage(messageId, myEmoji)
     }
 
-    suspend fun sendNotificiation(notification: PushNotification){
+    suspend fun sendNotification(notification: PushNotification){
         notificationRepo.sendNotification(notification)
     }
 

@@ -169,7 +169,7 @@ fun ForgotPasswordScreen(
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(50)),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.blue)
+                    containerColor = colorResource(id = R.color.blueStatus)
                 ),
                 onClick = {
                     if (emailTf.isEmpty()) {

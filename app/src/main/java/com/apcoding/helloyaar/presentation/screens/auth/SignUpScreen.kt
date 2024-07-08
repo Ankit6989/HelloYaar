@@ -147,7 +147,7 @@ fun SignUpScreen(
                         CircleShape
                     ),
                 value = usernameTf,
-                onValueChange = { usernameTf = it.lowercase() },
+                onValueChange = { usernameTf = it.lowercase()}, //changed from it = lowercase()
                 textStyle = TextStyle(
                     color = Color.Black,
                     fontSize = 16.sp
@@ -357,7 +357,7 @@ fun SignUpScreen(
                     }
                     focus.clearFocus()
                     notificationPermissionState.launchPermissionRequest()
-                    Firebase.messaging.subscribeToTopic("cotam")
+                    Firebase.messaging.subscribeToTopic("HelloYaar")
                 }),
                 singleLine = true,
                 visualTransformation = if (confirmPasswordVisibility) VisualTransformation.None else PasswordVisualTransformation(),
@@ -419,7 +419,7 @@ fun SignUpScreen(
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(50)),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.blue)
+                    containerColor = colorResource(id = R.color.blueStatus)
                 ),
                 onClick = {
                     usernameError = usernameTf.isEmpty()
@@ -438,7 +438,7 @@ fun SignUpScreen(
                     }
                     focus.clearFocus()
                     notificationPermissionState.launchPermissionRequest()
-                    Firebase.messaging.subscribeToTopic("cotam")
+                    Firebase.messaging.subscribeToTopic("HelloYaar")
                 }) {
                 Text(
                     text = "Sign up",

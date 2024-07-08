@@ -36,6 +36,7 @@ import androidx.compose.runtime.setValue
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 
 import androidx.compose.animation.ExperimentalAnimationApi
+import androidx.core.view.WindowCompat
 
 
 @AndroidEntryPoint
@@ -45,7 +46,9 @@ class MainActivity : ComponentActivity() {
     @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       // enableEdgeToEdge()
+
+
+       // WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
             val context = LocalContext.current
             val dataStore = StoreSettings(context)

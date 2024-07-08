@@ -40,8 +40,10 @@ fun AuthScreen(
     MyCheckSignedIn(navController = navController, viewModel = authViewModel)
     Box(modifier = Modifier.fillMaxSize()) {
         Image(
+            modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop,
-            painter = painterResource(id = R.drawable.cotam_background),
+            painter = painterResource(id = R.drawable.hello_yaar_background
+            ),
             contentDescription = ""
         )
     }
@@ -52,21 +54,29 @@ fun AuthScreen(
     ) {
         Column(modifier = Modifier.padding(top = 40.dp)) {
             Text(
-                text = "Co Tam \n messenger",
+                text = "Hello Yaar",
                 fontFamily = FontFamily.Serif,
-                fontSize = 30.sp,
+                fontSize = 60.sp,
                 textAlign = TextAlign.Center,
                 color = Color.White
+            )
+            Text(
+                text = " Connect friends \n\n easily & quickly ",
+                fontFamily = FontFamily.Cursive,
+                fontSize = 50.sp,
+                textAlign = TextAlign.Center,
+                color = Color.White
+
             )
         }
         Column(Modifier.fillMaxWidth()) {
             Button(
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.blue)
+                    containerColor = colorResource(id = R.color.background)
                 ),
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(start = 10.dp, end = 10.dp), onClick = {
+                    .padding(start = 30.dp, end =30.dp), onClick = {
                 navController.navigate("sign_up")
             }) {
                 Text(text = "Sign up", color = Color.White)

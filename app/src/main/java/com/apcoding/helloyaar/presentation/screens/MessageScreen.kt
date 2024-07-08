@@ -578,7 +578,7 @@ fun MessageScreen(
                                     )
 
                                     scope.launch {
-                                        messageViewModel.sendNotificiation(
+                                        messageViewModel.sendNotification(
                                             pushNotification
                                         )
                                         if (messages.isNotEmpty()) {

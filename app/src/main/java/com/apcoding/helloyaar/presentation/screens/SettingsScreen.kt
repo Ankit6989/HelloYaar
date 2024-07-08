@@ -137,7 +137,7 @@ fun SettingsScreen(
                     text = "About application",
                     leadingIcon = painterResource(id = R.drawable.about),
                     onClick = {
-                        uriHandler.openUri("https://github.com/zaurh/cotam")
+                        uriHandler.openUri("https://github.com/Ankit6989/HelloYaar")
                     }) {
                     Icon(
                         imageVector = Icons.Default.KeyboardArrowRight,
@@ -150,7 +150,7 @@ fun SettingsScreen(
                     text = "Contact",
                     leadingIcon = painterResource(id = R.drawable.mail),
                     onClick = {
-                        context.sendMail(to = "zaurway@gmail.com", subject = "CoTam")
+                        context.sendMail(to = "vona2989@gmail.com", subject = "HelloYaar")
                     }) {
                     Icon(
                         imageVector = Icons.Default.KeyboardArrowRight,

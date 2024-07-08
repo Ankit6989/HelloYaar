@@ -215,7 +215,7 @@ fun SignInScreen(
                     }
                     focus.clearFocus()
                     notificationPermissionState.launchPermissionRequest()
-                    Firebase.messaging.subscribeToTopic("cotam")
+                    Firebase.messaging.subscribeToTopic("HelloYaar")
                 }),
                 singleLine = true,
                 visualTransformation = if (passwordVisibility) VisualTransformation.None else PasswordVisualTransformation(),
@@ -272,7 +272,7 @@ fun SignInScreen(
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                 Text(
                     text = "Forgot password?",
-                    color = colorResource(id = R.color.blue),
+                    color = colorResource(id = R.color.blueStatus),
                     modifier = Modifier.clickable {
                         navController.navigate("forgot_password")
                     })
@@ -283,7 +283,7 @@ fun SignInScreen(
                     .fillMaxWidth()
                     .clip(RoundedCornerShape(50)),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = colorResource(id = R.color.blue)
+                    containerColor = colorResource(id = R.color.blueStatus)
                 ),
                 onClick = {
                     emailTfError = emailTf.isEmpty()
@@ -299,7 +299,7 @@ fun SignInScreen(
                     focus.clearFocus()
 
                     notificationPermissionState.launchPermissionRequest()
-                    Firebase.messaging.subscribeToTopic("cotam")
+                    Firebase.messaging.subscribeToTopic("HelloYaar")
                 }) {
                 Text(
                     text = "Sign in",

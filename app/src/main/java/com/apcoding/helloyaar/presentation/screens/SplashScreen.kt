@@ -39,7 +39,7 @@ fun SplashScreen(
     ) {
         Image(
             modifier = Modifier.size(200.dp),
-            painter = painterResource(id = R.drawable.logo),
+            painter = painterResource(id = R.drawable.hello_yaar_logo),
             contentDescription = ""
         )
     }

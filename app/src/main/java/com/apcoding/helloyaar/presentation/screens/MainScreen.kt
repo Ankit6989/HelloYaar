@@ -108,7 +108,7 @@ fun MainScreen(
         topBar = {
             TopAppBar(
                 title = {
-                    Text(text = if (selectedUsers.isNotEmpty()) "${selectedUsers.size}" else "Co Tam?")
+                    Text(text = if (selectedUsers.isNotEmpty()) "${selectedUsers.size}" else "HelloYaar")
                 },
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     MaterialTheme.colorScheme.background
