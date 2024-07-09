@@ -21,8 +21,8 @@ interface NotificationApi {
 
 
 interface NotificationApi {
-    @Headers("Authorization: Bearer 5da216a345df8e6987b867ae08b8fa12686b5cbc", "Content-Type:application/json")
-    @POST("v1/projects/helloyaar-964fa/messages:send")
+    @Headers("Authorization: Bearer YOUR TOKEN", "Content-Type:application/json")
+    @POST("v1/projects/YOUR ID/messages:send")
     suspend fun postNotification(
         @Body notification: PushNotification
     ): Response<ResponseBody>
